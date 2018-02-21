@@ -1,0 +1,31 @@
+from math import pi
+from time import sleep
+from datetime import datetime
+
+now=datetime.now()
+
+print 'Calculator is Starting Up, doo doo doo!'
+
+print 'Current Date and Time: %s/%s/%s %s:%s' % (now.month, now.day, now.year, now.hour, now.minute)
+
+sleep(1)
+hint="Dont' forget to include correct units! /nExiting..."
+
+option= raw_input("Enter C for Circle or T for Triangle: ")
+option=option.upper()
+
+if option=='C':
+    radius=float(raw_input("Please enter Radius of the Circle:"))
+    area= pi * radius**2
+    print 'The pie is baking...doo doo doo!'
+    sleep(1)
+    print ("Area: %.2f. \n%s" % (area, hint))
+elif option=='T':
+    base=float(raw_input("Please enter Base of Triangle:"))
+    height=float(raw_input("Please enter Height of Triangle:"))
+    area=base*height*(0.5)
+    print 'Uni Bi Tri...doo da doo!'
+    sleep(1)
+    print ("Area: %.2f. \n%s" % (area, hint))
+else: 
+    print 'YOU ENTERED GARBAGE, YO! PROGRAM EXITING.'
